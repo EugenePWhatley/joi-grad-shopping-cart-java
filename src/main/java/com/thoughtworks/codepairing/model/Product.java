@@ -11,15 +11,19 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
-        return price;
+    public int loyaltyPointsEarned() {
+        return (int) (price / Discount.info(productCode).getPoints());
     }
 
-    public String getProductCode() {
-        return productCode;
+    public double discount() {
+        return price * Discount.info(productCode).getValue();
     }
 
-    public String getName() {
-        return name;
+    public double totalPrice() {
+        return price - discount();
+    }
+
+    public String toString() {
+        return "- " + name + ", " + price;
     }
 }

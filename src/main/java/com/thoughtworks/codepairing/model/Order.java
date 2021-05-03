@@ -1,8 +1,8 @@
 package com.thoughtworks.codepairing.model;
 
 public class Order {
-    private double totalPrice;
-    private int loyaltyPoints;
+    private final double totalPrice;
+    private final int loyaltyPoints;
 
     public Order(double totalPrice, int loyaltyPointsEarned) {
         this.totalPrice = totalPrice;

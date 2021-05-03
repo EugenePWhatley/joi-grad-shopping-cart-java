@@ -1,7 +1,7 @@
 package com.thoughtworks.codepairing.model;
 
 public class Customer {
-    private String name;
+    private final String name;
 
     public Customer(String name) {
         this.name = name;
